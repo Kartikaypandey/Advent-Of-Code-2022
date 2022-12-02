@@ -1,0 +1,34 @@
+A=1
+B=2
+C=3
+sol=0
+while(True):
+    try:
+        a,b=input().split()
+        if(b=="X"):
+            if(a=="A"):
+                sol+=3
+            elif(a=="B"):
+                sol+=1
+            else:
+                sol+=2
+        elif(b=="Y"):
+            sol=sol+3
+            if(a=="A"):
+                sol+=1
+            elif(a=="B"):
+                sol+=2
+            else:
+                sol+=3
+        else:
+            sol=sol+6
+            if(a=="A"):
+                sol+=2
+            elif(a=="B"):
+                sol+=3
+            else:
+                sol+=1 
+            
+    except EOFError:
+        print(sol)
+        break
